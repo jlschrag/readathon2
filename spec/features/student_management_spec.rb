@@ -15,7 +15,7 @@ feature 'Student management' do
     expect(page).to have_content "Bill"    
     click_link "Edit"
     fill_in "Name", with: "Frank"
-    click_button "update"
+    click_button "Update Student"
     expect(page).to have_content "Updated"
     
     expect(page).to have_content "Frank"  
