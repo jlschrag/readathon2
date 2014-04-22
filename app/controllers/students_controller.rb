@@ -37,7 +37,16 @@ class StudentsController < ApplicationController
     end
   end
   
-  
+  def destroy
+    @student = Student.find params[:id]
+    
+    if @student.destroy
+      flash[:notice] = "Student Successfully Destroyed."
+      redirect_to students_path
+    else
+      render @student
+    end
+  end
   
   private
   
