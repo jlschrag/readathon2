@@ -1,4 +1,4 @@
 Readathon2::Application.routes.draw do
   root 'pages#index'
-  resources :students, only: [:index, :new, :create]
+  resources :students, only: [:index, :new, :create, :show]
 end
