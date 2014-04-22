@@ -25,7 +25,12 @@ feature 'Student management' do
     
   end
   
-  scenario 'A user sees all students in the system'
-
+  scenario 'A user sees all students in the system'do
+    FactoryGirl.create_list :student, 4
+    visit students_path
+    expect(page).to have_css ".student", count: 4
+  end
+  
+  
 
 end
