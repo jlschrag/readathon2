@@ -26,4 +26,7 @@ Readathon2::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  
+    # for clearance generated urls
+  config.action_mailer.default_url_options = { :host => 'http://devbox-78291.usw1.nitrousbox.com/' }
 end

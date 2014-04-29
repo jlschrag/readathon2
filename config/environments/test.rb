@@ -33,4 +33,7 @@ Readathon2::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  
+  # for clearance generated urls
+  config.action_mailer.default_url_options = { :host => 'http://devbox-78291.usw1.nitrousbox.com/' }
 end

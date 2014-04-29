@@ -7,10 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  
   <div class="container">
+  
+    <div class="login">
+        <% if signed_in? %>                                                                                                                 
+      Welcome <%= current_user.email %>                                                                                           
+      <%= link_to 'Sign out', sign_out_path, :method => :delete %>                                                                      
+    <% else %>
+      <%= link_to 'Sign in', sign_in_path %>   
+      <br />
+      <%= link_to 'Sign up', sign_up_path %>   
+    <% end %>                                                                                                                           
+                                                                                                                                        
+    <div id="flash">                                                                                                                    
+      <% flash.each do |key, value| %>                                                                                                  
+        <div class="flash <%= key %>"><%= value %></div>                                                                                
+      <% end %>                                                                                                                         
+    </div>  
+      
+    </div>
+    
+    
     <%= render "shared/flash" %>
     
     <%= yield %>
   </div>
+  
 </body>
 </html>
