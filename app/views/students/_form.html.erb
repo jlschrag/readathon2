@@ -1,5 +1,6 @@
-<%= simple_form_for @student do |s| %>
-  <%= s.input :name %>
+<%= simple_form_for @student do |f| %>
+  <%= f.input :name %>
+  <%= f.input :teacher_id, collection: Teacher.all %>
 
-  <%= s.submit %>
+  <%= f.submit %>
 <% end %>

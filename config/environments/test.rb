@@ -36,4 +36,6 @@ Readathon2::Application.configure do
   
   # for clearance generated urls
   config.action_mailer.default_url_options = { :host => 'http://devbox-78291.usw1.nitrousbox.com/' }
+  
+  config.action_controller.action_on_unpermitted_parameters = :raise
 end
