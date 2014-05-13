@@ -34,7 +34,4 @@ feature 'Student management' do
     visit students_path
     expect(page).to have_css ".student", count: 4
   end
-  
-  
-
 end
